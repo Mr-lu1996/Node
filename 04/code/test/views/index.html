@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <link rel="stylesheet" src="/public/css/style.css">
+</head>
+
+<body>
+    <script src="/public/js/main.js"></script>
+    <h>TEST</h>
+    <div>
+        <a href="/post">发表你的留言</a>
+    </div>
+    <div>
+        <ul>
+            {{each comments}}
+            <Li>{{$value.name}}说：{{$value.message}}</Li>
+            {{/each}}
+        </ul>
+    </div>
+</body>
+
+</html>

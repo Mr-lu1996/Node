@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>添加菜谱</title>
+</head>
+
+<body>
+    <h1><a href="/menus">菜单首页</a></h1>
+    <div class="menu container">
+        <form action="/menus/edit" method="post">
+            <table>
+                <!-- <tr>
+                        <td>菜系序号</td>
+                        <td><input type="text" class="form-control" id="input_id" name="id" required maxlength="10" value={{ menu.id }} readonly></td>
+                    </tr> -->
+                <!-- type设置为 hidden ，用来放一些不希望用户看见的数据，但是需要被提交到服务器的数据 -->
+                <input type="hidden" name="id" value={{ menu.id }}>
+                <tr>
+                    <td>精品炒菜</td>
+                    <td><input type="text" class="form-control" id="input_name" name="name" required maxlength="10" value={{ menu.name }}></td>
+                </tr>
+                <tr>
+                    <td>菜品分量</td>
+                    <td>
+                        <label class="radio-inline"><input type="radio" name="weight" id="input_weight" value="大份" checked>大份</label>
+                        <label class="radio-inline"><input type="radio" name="weight" id="input_weight" value="中份">中份</label>
+                        <label class="radio-inline"><input type="radio" name="weight" id="input_weight" value="小份">小份</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>是否加辣</td>
+                    <td>
+                        <label><input type="radio" name="isHot" value="是" checked>是</label>
+                        <label><input type="radio" name="isHot" value="否">否</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>我的身价</td>
+                    <td><input type="text" class="form-control" id="input_name" name="price" required maxlength="10" value={{ menu.price }}></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" class="btn btn-default">提交</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>留言版</title>
+    </head>
+    <body>
+        <div>
+            <a href="/post">发表留言</a>
+        </div>    
+        <div>
+            <ul>
+                <li>鹿先森说：<span>今天是2021年的最后一天</span></li>
+            </ul>
+            <ul>
+                {{each comments}}
+                    <li>{{$value.name}}说：<span>{{$value.message}}</span></li>
+                {{/each}}
+            </ul>
+        </div>    
+    </body>
+</html>

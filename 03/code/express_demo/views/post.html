@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>留言留言</title>
+    </head>
+    <body>
+        <h1 href='/'>首页</h1>
+        <h3>说一说</h3>
+        <div class="comment-container">
+            <form action="/comment" method="get">
+                <div>
+                    <label>你的名字</label>
+                    <input type="text" id="input_name" name="name" placeholder="email" maxlength="10" required>
+                </div>
+                <div>
+                    <label>留言板</label>
+                    <textarea id="text_message" name="message" cols="40" rows="15" minlength="2" maxlength="200"></textarea>
+                </div>
+                <button type="submit">发表</button>
+            </form>
+        </div>
+        <img src="/public/img/2.jpeg">
+    </body>
+</html>
